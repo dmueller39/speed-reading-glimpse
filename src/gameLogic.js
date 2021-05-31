@@ -24,7 +24,7 @@ function getTurn(letters: number) {
 export function getSpeedReadingGlimpsePlan(
   letters: number
 ): SpeedReadingGlimpseGame {
-  const turns = new Array(1).fill("").map(() => getTurn(letters));
+  const turns = new Array(10).fill("").map(() => getTurn(letters));
   return {
     turns,
   };
