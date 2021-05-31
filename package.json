@@ -1,11 +1,14 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "homepage": "http://dmueller39.github.io/speed-reading-glimpse",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "deploy": "gh-pages -d web-build",
+    "predeploy": "expo build:web"
   },
   "dependencies": {
     "expo": "^40.0.0",
@@ -25,6 +28,7 @@
     "babel-preset-expo": "^8.0.0",
     "flow-bin": "0.104.0",
     "flow-typed": "^3.1.0",
+    "gh-pages": "^3.2.0",
     "prettier": "1.18.2"
   },
   "private": true,

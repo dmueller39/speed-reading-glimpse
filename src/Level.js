@@ -51,6 +51,7 @@ export default class Menu extends React.Component<Props, State> {
   };
 
   _timeoutID: ?TimeoutID;
+  _didHandleAnswer: boolean = false;
 
   componentDidMount() {
     this._timeoutID = setTimeout(this._onPreGlimpseTimeout, 1000);
@@ -71,30 +72,31 @@ export default class Menu extends React.Component<Props, State> {
   };
 
   _onPostGlimpseTimeout = () => {
+    this._didHandleAnswer = false;
     this.setState({
       screenType: ENTRY_SCREEN_TYPE,
     });
   };
 
   confirmAnswer = () => {
-    const isCorrect =
-      this.state.answerText.toLowerCase() ===
-      this.props.game.turns[this.state.currentIndex].toLowerCase();
-    const mistakes = this.state.mistakes + (isCorrect ? 0 : 1);
-    this.setState({
-      mistakes,
-      screenType: ANSWER_SCREEN_TYPE,
-      isCorrect,
-    });
+    // handle race conditions that setState can't help with
+    if (!this._didHandleAnswer) {
+      this._didHandleAnswer = true;
+      const isCorrect =
+        this.state.answerText.toLowerCase() ===
+        this.props.game.turns[this.state.currentIndex].toLowerCase();
+      const mistakes = this.state.mistakes + (isCorrect ? 0 : 1);
+      this.setState({
+        mistakes,
+        screenType: ANSWER_SCREEN_TYPE,
+        isCorrect,
+      });
 
-    this._timeoutID = setTimeout(this._onCorrectAnswerTimeout, 500);
+      this._timeoutID = setTimeout(this._onAnswerTimeout, 500);
+    }
   };
 
-  _onCorrectAnswerTimeout = () => {
-    this.continueGame();
-  };
-
-  _onConfirmIncorrectAnswer = () => {
+  _onAnswerTimeout = () => {
     this.continueGame();
   };
 
@@ -113,7 +115,11 @@ export default class Menu extends React.Component<Props, State> {
   };
 
   _onBlur = () => {
-    if (this.state.answerText.length > 0) {
+    if (
+      this.state.answerText.length > 0 &&
+      // we also blur when we hit enter
+      this.state.screenType == ENTRY_SCREEN_TYPE
+    ) {
       this.confirmAnswer();
     }
   };

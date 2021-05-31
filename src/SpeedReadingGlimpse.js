@@ -24,7 +24,8 @@ export default function SpeedReadingGlimpse() {
     return <Menu options={OPTIONS} setGame={setGame} />;
   } else {
     const onComplete = (result: SpeedReadingGlimpseGameResult) => {
-      window.location.href = window.location.href.split("#")[0] + "#complete=1";
+      window.top.postMessage(window.location.href + " - complete", "*");
+
       setGame(null);
     };
 
