@@ -9,8 +9,6 @@ import { getSpeedReadingGlimpsePlan } from "./gameLogic";
 import Level from "./Level";
 import Menu from "./Menu";
 
-import type { StackNavigationProp, RouteProp } from "@react-navigation/stack";
-
 const OPTIONS = [2, 3, 4, 5, 6, 7].map((value) => {
   return {
     name: "" + value,
