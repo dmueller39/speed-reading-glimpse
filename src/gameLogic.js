@@ -8,8 +8,8 @@ function getCharacter(characters: string) {
   return characters.substring(randomIndex, randomIndex + 1);
 }
 
-function getTurn(letters: number) {
-  return new Array(letters)
+function getTurn(letterCount: number) {
+  return new Array(letterCount)
     .fill("")
     .map(() => getCharacter(ALPHABET))
     .join("");
@@ -22,9 +22,10 @@ function getTurn(letters: number) {
 // We may eventually want to include meaningful words, but for now just do
 // characters
 export function getSpeedReadingGlimpsePlan(
-  letters: number
+  letterCount: number,
+  turnCount: number
 ): SpeedReadingGlimpseGame {
-  const turns = new Array(10).fill("").map(() => getTurn(letters));
+  const turns = new Array(turnCount).fill("").map(() => getTurn(letterCount));
   return {
     turns,
   };
