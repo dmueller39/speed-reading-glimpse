@@ -1,22 +1,22 @@
 self.__precacheManifest = [
   {
-    "revision": "d419035211ea05f43a0d",
-    "url": "/speed-reading-glimpse/static/js/app.c5feb2b0.chunk.js"
+    "revision": "13dd3101648100433e60",
+    "url": "/speed-reading-glimpse/static/js/app.8a6a590c.chunk.js"
   },
   {
     "revision": "616f23120bbb12aac6ee",
     "url": "/speed-reading-glimpse/static/js/runtime~app.8c5d5420.js"
   },
   {
-    "revision": "63acdc43f693c413a285",
-    "url": "/speed-reading-glimpse/static/js/2.6457d452.chunk.js"
+    "revision": "f03aa07a94ceab99030c",
+    "url": "/speed-reading-glimpse/static/js/2.6604cce1.chunk.js"
   },
   {
     "revision": "f328c398676e066fb4e76f0c028592b4",
     "url": "/speed-reading-glimpse/expo-service-worker.js"
   },
   {
-    "revision": "aab13fece1b6657dea0b14ddbdcbe734",
+    "revision": "ae710e4fa1535b24892d997803f7227e",
     "url": "/speed-reading-glimpse/index.html"
   },
   {
@@ -29,7 +29,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "e7a7b3e23d2275a5b0fade360ad89d40",
-    "url": "/speed-reading-glimpse/static/js/2.6457d452.chunk.js.LICENSE.txt"
+    "url": "/speed-reading-glimpse/static/js/2.6604cce1.chunk.js.LICENSE.txt"
   },
   {
     "revision": "1071922eac3f222004bfae59f9ac1b9a",

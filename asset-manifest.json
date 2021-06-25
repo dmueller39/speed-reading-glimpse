@@ -1,22 +1,22 @@
 {
   "files": {
-    "app.js": "/speed-reading-glimpse/static/js/app.c5feb2b0.chunk.js",
-    "app.js.map": "/speed-reading-glimpse/static/js/app.c5feb2b0.chunk.js.map",
+    "app.js": "/speed-reading-glimpse/static/js/app.8a6a590c.chunk.js",
+    "app.js.map": "/speed-reading-glimpse/static/js/app.8a6a590c.chunk.js.map",
     "runtime~app.js": "/speed-reading-glimpse/static/js/runtime~app.8c5d5420.js",
     "runtime~app.js.map": "/speed-reading-glimpse/static/js/runtime~app.8c5d5420.js.map",
-    "static/js/2.6457d452.chunk.js": "/speed-reading-glimpse/static/js/2.6457d452.chunk.js",
-    "static/js/2.6457d452.chunk.js.map": "/speed-reading-glimpse/static/js/2.6457d452.chunk.js.map",
+    "static/js/2.6604cce1.chunk.js": "/speed-reading-glimpse/static/js/2.6604cce1.chunk.js",
+    "static/js/2.6604cce1.chunk.js.map": "/speed-reading-glimpse/static/js/2.6604cce1.chunk.js.map",
     "favicon-16.png": "/speed-reading-glimpse/favicon-16.png",
     "favicon-32.png": "/speed-reading-glimpse/favicon-32.png",
     "favicon.ico": "/speed-reading-glimpse/favicon.ico",
     "index.html": "/speed-reading-glimpse/index.html",
     "manifest.json": "/speed-reading-glimpse/manifest.json",
     "serve.json": "/speed-reading-glimpse/serve.json",
-    "static/js/2.6457d452.chunk.js.LICENSE.txt": "/speed-reading-glimpse/static/js/2.6457d452.chunk.js.LICENSE.txt"
+    "static/js/2.6604cce1.chunk.js.LICENSE.txt": "/speed-reading-glimpse/static/js/2.6604cce1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.8c5d5420.js",
-    "static/js/2.6457d452.chunk.js",
-    "static/js/app.c5feb2b0.chunk.js"
+    "static/js/2.6604cce1.chunk.js",
+    "static/js/app.8a6a590c.chunk.js"
   ]
 }
