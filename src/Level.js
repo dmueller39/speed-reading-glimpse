@@ -91,13 +91,7 @@ export default class Menu extends React.Component<Props, State> {
         screenType: ANSWER_SCREEN_TYPE,
         isCorrect,
       });
-
-      this._timeoutID = setTimeout(this._onAnswerTimeout, 500);
     }
-  };
-
-  _onAnswerTimeout = () => {
-    this.continueGame();
   };
 
   _onChangeAnswerText = (answerText: string) => {
@@ -187,6 +181,12 @@ export default class Menu extends React.Component<Props, State> {
         return (
           <Container>
             <View style={styles.answerContainer}>{this._renderIcon()}</View>
+            <LabelButton
+              style={{ textAlign: "center" }}
+              label="next"
+              onPress={() => this.continueGame()}
+              type="positive"
+            />
           </Container>
         );
       default:
