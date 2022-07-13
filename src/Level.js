@@ -148,7 +148,8 @@ export default class Menu extends React.Component<Props, State> {
   };
 
   render() {
-    const answerIcon = this._renderIcon();
+    const isLast = this.state.currentIndex + 1 >= this.props.game.turns.length;
+
     switch (this.state.screenType) {
       case 1:
         return <Container></Container>;
@@ -181,9 +182,13 @@ export default class Menu extends React.Component<Props, State> {
         return (
           <Container>
             <View style={styles.answerContainer}>{this._renderIcon()}</View>
+            <Text style={{ textAlign: "center" }}>
+              {this.state.answerText.toLowerCase()} /{" "}
+              {this.props.game.turns[this.state.currentIndex].toLowerCase()}
+            </Text>
             <LabelButton
               style={{ textAlign: "center" }}
-              label="next"
+              label={isLast ? "finish" : "next"}
               onPress={() => this.continueGame()}
               type="positive"
             />
@@ -196,6 +201,10 @@ export default class Menu extends React.Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
+  compareContainer: {
+    alignItems: "center",
+    flexDirection: "row",
+  },
   word: {
     width: "100%",
     textAlign: "center",

@@ -12,7 +12,7 @@ import Menu from "./Menu";
 const OPTIONS = [2, 3, 4, 5, 6, 7].map((value) => {
   return {
     name: "" + value,
-    getGamePlan: () => getSpeedReadingGlimpsePlan(value, 10),
+    getGamePlan: () => getSpeedReadingGlimpsePlan(value, 7),
   };
 });
 
