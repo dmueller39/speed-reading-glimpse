@@ -22,9 +22,23 @@ export default function SpeedReadingGlimpse() {
     return <Menu options={OPTIONS} setGame={setGame} />;
   } else {
     const onComplete = (result: SpeedReadingGlimpseGameResult) => {
-      window.top.postMessage(window.location.href + " - complete", "*");
+      const inner = {
+        ...result,
+        letterCount: game == null ? 0 : game.turns[0].length,
+      };
+      const dataObject = {
+        type: "game",
+        activitysummary: `${inner.letterCount} letters, ${inner.length} turns`,
+        resultsummary: `${inner.length - inner.mistakes} / ${
+          inner.length
+        } correct`,
+        data: JSON.stringify(inner),
+      };
+      const dataStr = JSON.stringify(dataObject);
+      const message = window.location.href + ";complete;" + dataStr;
+      window.top.postMessage(message, "*");
 
-      setGame(null);
+      setTimeout(() => setGame(null), 1000);
     };
 
     return <Level game={game} onComplete={onComplete} />;

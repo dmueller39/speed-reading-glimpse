@@ -171,7 +171,7 @@ export default class Menu extends React.Component<Props, State> {
                 autoFocus={true}
                 autoCapitalize="none"
                 autoCorrect={false}
-                autoComplete={false}
+                autoComplete="off"
                 onChangeText={this._onChangeAnswerText}
                 onKeyPress={this._onKeyPress}
                 style={styles.textInput}
