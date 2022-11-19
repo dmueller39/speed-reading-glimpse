@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "1d3c13a411a9bfe1f657",
-    "url": "/speed-reading-glimpse/static/js/app.74f44503.chunk.js"
+    "revision": "e9efc575aec80ef5ce75",
+    "url": "/speed-reading-glimpse/static/js/app.81634de0.chunk.js"
   },
   {
     "revision": "616f23120bbb12aac6ee",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/speed-reading-glimpse/expo-service-worker.js"
   },
   {
-    "revision": "7a5d7cd12b8ec849b40cb50a522aaa0a",
+    "revision": "bc64d88275becbd42dac5428930f3a06",
     "url": "/speed-reading-glimpse/index.html"
   },
   {

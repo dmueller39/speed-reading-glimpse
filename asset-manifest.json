@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/speed-reading-glimpse/static/js/app.74f44503.chunk.js",
-    "app.js.map": "/speed-reading-glimpse/static/js/app.74f44503.chunk.js.map",
+    "app.js": "/speed-reading-glimpse/static/js/app.81634de0.chunk.js",
+    "app.js.map": "/speed-reading-glimpse/static/js/app.81634de0.chunk.js.map",
     "runtime~app.js": "/speed-reading-glimpse/static/js/runtime~app.8c5d5420.js",
     "runtime~app.js.map": "/speed-reading-glimpse/static/js/runtime~app.8c5d5420.js.map",
     "static/js/2.ee5d76cd.chunk.js": "/speed-reading-glimpse/static/js/2.ee5d76cd.chunk.js",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime~app.8c5d5420.js",
     "static/js/2.ee5d76cd.chunk.js",
-    "static/js/app.74f44503.chunk.js"
+    "static/js/app.81634de0.chunk.js"
   ]
 }
